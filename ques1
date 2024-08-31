@@ -1,0 +1,38 @@
+class task :
+    name
+    num
+    email
+    dta={name:{num:[],email:[]} };
+        
+def addcon(name,numb,email1):
+    dta[name][num]=numb;
+    dta[name][email]=email1;
+    
+
+def update(name,numb,email1):
+    if name in dta:
+       dta[name][num]=numb;
+       dta[name][email]=email1;
+       print("updated");
+        
+    print("not updated")
+    
+def deletecon(name):
+    if(name in dta):
+        del dta[name]
+    
+    print("not found")
+    
+# def updatecon(student,name,number,email):
+#     student[name]=[number,email];
+time=input("enter number of times")
+for i in range(time):
+  name=input("enter your name")
+  number=input("enter your number")
+  email=input("enter your email")
+t=task()
+t.addcon(name,number,email)
+for i in task.dta:
+    print("name "+ i +" phone " + student[i][0] +" emailid " + student[i][1])
+  
+
